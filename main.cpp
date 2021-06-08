@@ -4,16 +4,10 @@
 using namespace std;
 
 class Fuzzy{
-float memberPenghasilanKecil = 0;
-float memberPenghasilanSedang = 0;
-float memberPenghasilanBesar = 0;
-float memberSaldoSedikit = 0;
-float memberSaldoCukup = 0;
-float memberSaldoBanyak = 0;
-float memberKeaktifanJarang = 0;
-float memberKeaktifanNormal = 0;
-float memberKeaktifanSering = 0;
-float terbesarX, terbesarY;
+float memberPenghasilanKecil = 0, memberPenghasilanSedang = 0, memberPenghasilanBesar = 0;
+float memberSaldoSedikit = 0, memberSaldoCukup = 0, memberSaldoBanyak = 0;
+float memberKeaktifanJarang = 0, memberKeaktifanNormal = 0, memberKeaktifanSering = 0;
+float terbesarX = 0, terbesarY = 0;
 
 public:
     //Keanggotaan Penghasilan
@@ -274,7 +268,7 @@ int main(){
     cout << "\nINFERENSI\n";
     test.Inferensi();
 
-    cout << "\nDEFUZZIFIKASI\n";
+    cout << "\n=========DEFUZZIFIKASI=========\n";
     cout << "\nMasukkan jumlah sampel\t= "; cin >> sampel;
     cout << endl;
     na = test.defuzzifikasi(sampel);
