@@ -179,9 +179,9 @@ public:
             }
         }
         if(terbesarX > 0)
-            cout << endl << "Nilai tidak mendapatkan emas \t= " << terbesarX << endl;
+            cout << endl << "======Nilai tidak mendapatkan emas====== \t= " << terbesarX << endl;
         if(terbesarY > 0)
-            cout << endl << "Nilai mendapatkan emas \t= " << terbesarY << endl;
+            cout << endl << "=========Nilai mendapatkan emas========= \t= " << terbesarY << endl;
     }
 
     float defuzzifikasi(int sampel){
@@ -253,25 +253,27 @@ int main(){
     float kt;
     float na;
     Fuzzy test;
-
-    cout << "Masukkan Penghasilan (Juta): ";
+    cout << "====================================================================="<< endl;
+    cout << "||                       APLIKASI FUZZY                            ||"<< endl;
+    cout << "======== PENGAMBILAN KEPUTUSAN PEMENANG UNTUK UNDIAN BANK============"<<endl<<endl;
+    cout << "||Masukkan Penghasilan (Juta)||: ";
     cin >> penghasilan;
     test.anggotaPenghasilan(penghasilan);
-    cout << "Masukkan Saldo (Juta): ";
+    cout << "||Masukkan Saldo (Juta)||: ";
     cin >> saldo;
     test.anggotaSaldo(saldo);
-    cout << "Masukkan Keaktifan transaksi per bulan (kali): ";
+    cout << "||Masukkan Keaktifan transaksi per bulan (kali)||: ";
     cin >> kt;
     test.anggotaKeaktifan(kt);
     test.cetakMember();
 
-    cout << "\nINFERENSI\n";
+    cout << "\n||INFERENSI||\n";
     test.Inferensi();
 
-    cout << "\n=========DEFUZZIFIKASI=========\n";
+    cout << "\n||DEFUZZIFIKASI||\n";
     cout << "\nMasukkan jumlah sampel\t= "; cin >> sampel;
     cout << endl;
     na = test.defuzzifikasi(sampel);
-    cout << "Nilai Akhir \t\t= " << na;
+    cout << "=====Nilai Akhir===== \t\t= " << na;
     return 0;
 }
